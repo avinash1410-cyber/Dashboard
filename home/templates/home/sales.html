@@ -1,0 +1,76 @@
+<!-- home/sales.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sales Data</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>End Year</th>
+            <th>Intensity</th>
+            <th>Sector</th>
+            <th>Topic</th>
+            <th>Insight</th>
+            <th>URL</th>
+            <th>Region</th>
+            <th>Start Year</th>
+            <th>Impact</th>
+            <th>Added</th>
+            <th>Published</th>
+            <th>Country</th>
+            <th>Relevance</th>
+            <th>PESTLE</th>
+            <th>Source</th>
+            <th>Title</th>
+            <th>Likelihood</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.end_year }}</td>
+            <td>{{ item.intensity }}</td>
+            <td>{{ item.sector }}</td>
+            <td>{{ item.topic }}</td>
+            <td>{{ item.insight }}</td>
+            <td><a href="{{ item.url }}">{{ item.url }}</a></td>
+            <td>{{ item.region }}</td>
+            <td>{{ item.start_year }}</td>
+            <td>{{ item.impact }}</td>
+            <td>{{ item.added }}</td>
+            <td>{{ item.published }}</td>
+            <td>{{ item.country }}</td>
+            <td>{{ item.relevance }}</td>
+            <td>{{ item.pestle }}</td>
+            <td>{{ item.source }}</td>
+            <td>{{ item.title }}</td>
+            <td>{{ item.likelihood }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
