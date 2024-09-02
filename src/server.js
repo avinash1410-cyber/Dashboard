@@ -1,0 +1,1 @@
+export const server = "https://avi8654340.pythonanywhere.com/";
